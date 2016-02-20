@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 ## Objective 1 - Loading and Preprocessing
 
@@ -91,7 +96,7 @@ with(raw_activity_by_date,
 abline(h=raw_mean) # put in a vertical abline at mean
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png) 
 
 Now we can look at it as a histogram of the overall activity pattern
 
@@ -104,7 +109,7 @@ abline(v=raw_mean, lty=2)
 legend('topright',lty=2,legend=c(paste('Mean = ',raw_mean)))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 ### 2.2 Calculate and report the mean and median total number of steps taken per day
 
@@ -167,7 +172,7 @@ g <- ggplot(activity_by_interval,aes(x=interval,y=steps/day_count)) +
 print(g)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png) 
+![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
 
 ### 3.2 Which 5-minute interval (for all days) has most steps?
 
@@ -266,7 +271,7 @@ with(fixed_activity_by_date,
 abline(h=fixed_mean) # put in a vertical abline at mean
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-17-1.png) 
+![plot of chunk unnamed-chunk-17](figure/unnamed-chunk-17-1.png) 
 
 For the data with NA values replaced, we can look at it as a histogram of the overall activity pattern.
 
@@ -279,7 +284,7 @@ abline(v=fixed_mean, lty=2)
 legend('topright',lty=2,legend=c(paste('Mean = ', fixed_mean)))
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-18-1.png) 
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18-1.png) 
 
 **Replacing the NA data with the mean steps per day impacts mean and median**
 
@@ -374,4 +379,4 @@ g <- ggplot(all_activity_by_interval,aes(x=interval,y=mean)) +
 print(g)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-22-1.png) 
+![plot of chunk unnamed-chunk-22](figure/unnamed-chunk-22-1.png) 
